@@ -1,2 +1,2 @@
-# maintenance
-Maintenance cover
+# Maintenance
+Maintenance page for Smartlist
