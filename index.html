@@ -1,96 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0-alpha/dist/css/materialize.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/build.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
+    <title>Under maintenance</title>
     <style>
-      .waves-effect:not(.waves-light, ._darkTheme .waves-effect) .waves-ripple {
-        background: rgba(0, 0, 0, .2) !important
-      }
-      ._darkTheme .waves-ripple {background: rgba(255, 255, 255, .2) !important}
-      .waves-light .waves-ripple {background: rgba(255, 255, 255, .2) !important}
-      nav a,nav a i {
-        background: transparent !important;
-        line-height: 65px !important
-      }
-      code {overflow-x: scroll;}
-      nav .waves-ripple {
-        transition: all .5s !important
-      }
-      .waves-ripple {
-        transition: transform .8s cubic-bezier(0.4, 0, 0.2, 1), opacity .4s !important
-      }
-      #main {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%);
-      }
-      .alert .row {margin: 0!important}
-      .alert {
-        background: rgba(100, 100, 255, .1);
-        padding: 10px;
-        display: inline-block;
-        border: 1.5px solid  rgba(100, 100, 255, .9);
-        border-radius: 4px;
-      }
-      .btn {margin: 3px!important;margin-left: 2x!important}
-      .alert .col {padding-bottom:: 0!important;}
-      .alert p {margin-bottom: 0;}
-      .btn-round {border-radius: 999px;height: auto!important;line-height:40px;text-transform:none !important;padding-left: 20px !important;padding-right: 20px !important;box-shadow: none !important}
-      .modal {
-        position: fixed!important;
-        top: 50%!important;
-        left: 50% !important;
-        transform: translate(-50%, -50%)!important;
-      }
+      *{ font-family:"Outfit", sans-serif }
     </style>
   </head>
   <body>
-    <div id="debug" class="modal">
-      <div class="modal-content">
-        <h5>
-        Debug info
-        </h5>
-        <p>
-        This information will be helpful when reporting it to us
-        </p>
-        <code>
-        {"HTTP_USER_AGENT": <?=json_encode($_SERVER['HTTP_USER_AGENT']);?>, "HTTP_COOKIE": <?=json_encode($_SERVER['HTTP_COOKIE']);?>, "REQUEST_TIME_FLOAT": <?=json_encode($_SERVER['REQUEST_TIME_FLOAT'])?>}
-        </code>
-      </div>
-    </div>
-    <div id="main">
-      <div class="row">
-        <div class="container">
-          <div class="col s12 m6">
-            <h2>
-              <b>Smartlist is currently under planned maintenance</b>
-            </h2>
-            <p>
-              We're currently working on some cool new features. Check back later! 
-            </p>
-            <p>If you think our servers are down, contact us!</p>
-          </div>
-          <div class="col s12 m6 hide-on-small-only">
-
-            <img src="https://i.ibb.co/Y2pCDL5/abstract-maintenance-service.png" style="width:100%">
-            <br><br>
-            Illustration by <a href="https://icons8.com/illustrations/author/5e7e24ce01d0360013bb7479">Natasha Remarchuk</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
-            </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0-alpha/dist/js/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ManuTheCoder/JS-Essentials/essentials.min.js"></script>
-    <script>
-      $(".modal").modal()
-    </script>
+    <nav class="fixed top-0 flex items-center p-5 gap-2">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAZNJREFUaN7t1r1rFEEUAPCfnBrTKCEao6IIxso0EqsgCCJWwcZUVqKNlZ3Ryj9A1ErSilrGTgyk8APELxQVJKQxglioYKMgSZEYi316x+XQC+y5Kd4PBo6ZeTNvZmdnj5RSSimllFJKLW2Isip1YQv60ItaU3svrmEcm6tOtpWjeIsZPMSuhradmMBilNtN7avCcSxgCR+wO+r34X7Uf8an+P0Ag1Un3byARfzARazDMF5FwjM4gsOYjro3OFh14r+N4ivOYj1GMBuJPsVQQ9/9eBxt73EMa6pewCGcUOz8ScVxWcIkBlr034M70ecLTmNtlQuooRtj+KZ4H26i/y8xW3E9+n7HBRVesxtxGfNRrmBTm3GXMBdxV9uMK1U/bqjv5Hkr28kunFN/crew7X8lP4C76mf5lOUfsXbULH939nY6+SE8iQlnlXObjOBdjPkMBzqV/HY8j4leK/c+b/x+vMCOdgNX8ujnFf99FnAGL0tcwEc8UhzPe5jCzxLH/6MbPZ0YOPTEHCmllFJKKaX0T78A+YhV3MZGJ4QAAAAASUVORK5CYII=" />
+      <span class="text-xl">Smartlist</span>
+    </nav>
+    <main class="w-screen h-screen flex items-center justify-center">
+      <section class="selection:bg-green-900 selection:text-white w-[calc(100vw-20px)] rounded-2xl px-8 py-6 max-w-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="my-5 w-20 h-20 mb-10">
+          <path fill="#FFAC33" d="M34.347 16.893l-8.899-3.294-3.323-10.891c-.128-.42-.517-.708-.956-.708-.439 0-.828.288-.956.708l-3.322 10.891-8.9 3.294c-.393.146-.653.519-.653.938 0 .418.26.793.653.938l8.895 3.293 3.324 11.223c.126.424.516.715.959.715.442 0 .833-.291.959-.716l3.324-11.223 8.896-3.293c.391-.144.652-.518.652-.937 0-.418-.261-.792-.653-.938z" />
+          <path fill="#FFCC4D" d="M14.347 27.894l-2.314-.856-.9-3.3c-.118-.436-.513-.738-.964-.738-.451 0-.846.302-.965.737l-.9 3.3-2.313.856c-.393.145-.653.52-.653.938 0 .418.26.793.653.938l2.301.853.907 3.622c.112.444.511.756.97.756.459 0 .858-.312.97-.757l.907-3.622 2.301-.853c.393-.144.653-.519.653-.937 0-.418-.26-.793-.653-.937zM10.009 6.231l-2.364-.875-.876-2.365c-.145-.393-.519-.653-.938-.653-.418 0-.792.26-.938.653l-.875 2.365-2.365.875c-.393.146-.653.52-.653.938 0 .418.26.793.653.938l2.365.875.875 2.365c.146.393.52.653.938.653.418 0 .792-.26.938-.653l.875-2.365 2.365-.875c.393-.146.653-.52.653-.938 0-.418-.26-.792-.653-.938z"></path>
+        </svg>
+        <h1 class="text-3xl my-3">Dashboard under maintenance</h1>
+        <h2 class="text-lg my-2 text-gray-700">We're currently improving our app's infrastructure and security. Check back later!</h2>
+        <a draggable="false" href="/" class="my-1 mr-1 inline-flex hover:shadow-lg focus:ring-2 outline-none hover:bg-sky-600 bg-sky-500 px-7 py-2 rounded-full text-white">Twitter</a>
+        <a draggable="false" href="/" class="my-1 mr-1 inline-flex hover:shadow-lg focus:ring-2 outline-none ring-gray-500 hover:bg-neutral-900 bg-neutral-800 px-7 py-2 rounded-full text-white">GitHub</a>
+      </section>
+    </main>
   </body>
 </html>
